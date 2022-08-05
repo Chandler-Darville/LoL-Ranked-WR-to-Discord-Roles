@@ -9,10 +9,9 @@ RIOT_API_KEY = os.getenv('RIOT_API_KEY')
 GUILD_ID = os.getenv('GUILD_ID')
 BOT_TOKEN = os.getenv('BOT_TOKEN')
 
+PLAYER_JSON = os.getenv('PLAYER_JSON')
 
-with open("players.json",'r') as f:
-
-    players = json.load(f)
+players = json.loads(PLAYER_JSON)
 
 
 def callAPI(region, endpoint):
